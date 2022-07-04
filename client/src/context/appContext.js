@@ -107,6 +107,10 @@ const AppProvider = ({ children }) => {
     dispatch({ type: TOOGLE_SIDEBAR });
   };
 
+  const updateUser = async (currentUser) => {
+    console.log(currentUser);
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -116,6 +120,7 @@ const AppProvider = ({ children }) => {
         LoginUser,
         logOutUser,
         toggleSideBar,
+        updateUser,
       }}
     >
       {children}
